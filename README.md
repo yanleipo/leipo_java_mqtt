@@ -8,5 +8,4 @@ mvn package
 CLASSPATH=target/my-app-1.0-SNAPSHOT.jar:lib/* java com.ylpsingapore.app.MQTTSample -a subscribe  -b ylptest.ddns.net -p 8883  -w solace1 -v true -r /Users/leipoyan/Downloads/keep/certs2/MyRootCaCert.jks -s 1
 CLASSPATH=target/my-app-1.0-SNAPSHOT.jar:lib/* java com.ylpsingapore.app.MQTTSample  -b ylptest.ddns.net -p 8883  -w solace1 -v true -r /Users/leipoyan/Downloads/keep/certs2/MyRootCaCert.jks -s 1
 
-CLASSPATH=target/my-app-1.0-SNAPSHOT.jar:lib/* java com.ylpsingapore.app.TestMQTT -cip ylptest.ddns.net:8883 -cu default -cp=default
-mvn exec:java -Dexec.mainClass="com.ylpsingapore.app.TestMQTT" -Dexec.args="-cip ylptest.ddns.net:8883 -cu default -cp default"
+mvn exec:java -Dexec.mainClass="com.ylpsingapore.app.MQTTSample" -Dexec.args="-a subscribe  -b ylptest.ddns.net -p 8883  -w solace1 -v true -r /Users/leipoyan/Downloads/keep/certs2/MyRootCaCert.jks -s 1"
