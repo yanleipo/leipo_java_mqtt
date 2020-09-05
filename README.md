@@ -5,4 +5,6 @@ mvn archetype:generate -DgroupId=com.ylpsingapore.app -DartifactId=my-app -Darch
 mvn package
 
 3 Run the application
-java -cp target/my-app-1.0-SNAPSHOT.jar com.ylpsingapore.app.App
+java -cp target/my-app-1.0-SNAPSHOT.jar com.ylpsingapore.app.TestMQTT
+CLASSPATH=target/my-app-1.0-SNAPSHOT.jar:lib/* java com.ylpsingapore.app.TestMQTT -cip ylptest.ddns.net:8883 -cu default -cp=default
+mvn exec:java -Dexec.mainClass="com.ylpsingapore.app.TestMQTT" -Dexec.args="-cip ylptest.ddns.net:8883 -cu default -cp default"
